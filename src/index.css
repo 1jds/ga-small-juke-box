@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+  text-align: center;
+  padding: 30px;
+  font-family: 'Press Start 2P', cursive;
+}
+
+input[aria-label='volume'] {
+  display: block;
+  margin: 1rem;
+}
+
+/* BUTTON STYLES TAKEN AND SLIGHTLY ALTERED FROM MATTHEW SHIELDS ON CODEPEN: https://codepen.io/MatthewShields/pen/pwrXpV?editors=0100 */
+
+.eightbit-btn {
+  background: #92cd41;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  font-size: 18px;
+  padding: 15px;
+  font-family: 'Press Start 2P', cursive;
+  text-decoration: none;
+  color: white;
+  box-shadow: inset -4px -4px 0px 0px #4aa52e;
+}
+.eightbit-btn:hover,
+.eightbit-btn:focus {
+  background: #76c442;
+  box-shadow: inset -6px -6px 0px 0px #4aa52e;
+}
+.eightbit-btn:active {
+  box-shadow: inset 4px 4px 0px 0px #4aa52e;
+}
+.eightbit-btn:before,
+.eightbit-btn:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  box-sizing: content-box;
+}
+.eightbit-btn:before {
+  top: -6px;
+  left: 0;
+  border-top: 6px black solid;
+  border-bottom: 6px black solid;
+}
+.eightbit-btn:after {
+  left: -6px;
+  top: 0;
+  border-left: 6px black solid;
+  border-right: 6px black solid;
+}
+.eightbit-btn--reset {
+  background: #e76e55;
+  box-shadow: inset -4px -4px 0px 0px #8c2022;
+}
+.eightbit-btn--reset:hover,
+.eightbit-btn--reset:focus {
+  background: #ce372b;
+  box-shadow: inset -6px -6px 0px 0px #8c2022;
+}
+.eightbit-btn--reset:active {
+  box-shadow: inset 4px 4px 0px 0px #8c2022;
+}
+.eightbit-btn--proceed {
+  background: #f7d51d;
+  box-shadow: inset -4px -4px 0px 0px #e59400;
+}
+.eightbit-btn--proceed:hover,
+.eightbit-btn--proceed:focus {
+  background: #f2c409;
+  box-shadow: inset -6px -6px 0px 0px #e59400;
+}
+.eightbit-btn--proceed:active {
+  box-shadow: inset 4px 4px 0px 0px #e59400;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.song-btns-grid {
+  max-width: 700px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  margin: 0 auto;
+  justify-content: center;
+  gap: 20px;
+}
+
+.progress-display-flex {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+/* SLIDER STYLES MADE WITH HELP FROM: http://danielstern.ca/range.css/?ref=css-tricks#/ */
+
+input[type='range'].slider {
+  width: 100%;
+  margin: 3px 0;
+  background-color: transparent;
+  -webkit-appearance: none;
+  appearance: none;
+}
+input[type='range'].slider:focus {
+  outline: none;
+}
+input[type='range'].slider::-webkit-slider-runnable-track {
+  background: #92cd41;
+  box-shadow: inset -4px -4px 0px 0px #4aa52e;
+  border: 4px solid #000000;
+  width: 100%;
+  height: 35px;
+  cursor: pointer;
+}
+input[type='range'].slider::-webkit-slider-thumb {
+  margin-top: -7px;
+  width: 41px;
+  height: 41px;
+  background: #76c442;
+  box-shadow: inset -4px -4px 0px 0px #4aa52e;
+  border: 4px solid #000000;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+input[type='range'].slider:focus::-webkit-slider-runnable-track {
+  background: #92cd41;
+  background: #76c442;
+}
+input[type='range'].slider::-moz-range-track {
+  background: #92cd41;
+  border: 4px solid #000000;
+  width: 100%;
+  height: 35px;
+  cursor: pointer;
+}
+input[type='range'].slider::-moz-range-thumb {
+  width: 41px;
+  height: 41px;
+  background: #76c442;
+  border: 4px solid #000000;
+  cursor: pointer;
+}
+input[type='range'].slider::-ms-track {
+  background: transparent;
+  border-color: transparent;
+  border-width: 3px 0;
+  color: transparent;
+  width: 100%;
+  height: 35px;
+  cursor: pointer;
+}
+input[type='range'].slider::-ms-fill-lower {
+  background: #92cd41;
+  border: 4px solid #000000;
+}
+input[type='range'].slider::-ms-fill-upper {
+  background: #92cd41;
+  border: 4px solid #000000;
+}
+input[type='range'].slider::-ms-thumb {
+  width: 41px;
+  height: 41px;
+  background: #76c442;
+  border: 4px solid #000000;
+  cursor: pointer;
+  margin-top: 0px;
+  /*Needed to keep the Edge thumb centred*/
+}
+input[type='range'].slider:focus::-ms-fill-lower {
+  background: #92cd41;
+}
+input[type='range'].slider:focus::-ms-fill-upper {
+  background: #92cd41;
+}
+/*TODO: Use one of the selectors from https://stackoverflow.com/a/20541859/7077589 and figure out
+how to remove the virtical space around the range input in IE*/
+@supports (-ms-ime-align: auto) {
+  /* Pre-Chromium Edge only styles, selector taken from hhttps://stackoverflow.com/a/32202953/7077589 */
+  input[type='range'].slider {
+    margin: 0;
+    /*Edge starts the margin from the thumb, not the track as other browsers do*/
+  }
+}
