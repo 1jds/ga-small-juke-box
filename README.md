@@ -4,7 +4,7 @@ This repository hosts the code for a small homework task completed in the old cl
 
 Here is an illustrative image of the project running on http://localhost:3000/
 
-<img alt="Sample Screenshot Close" src="https://github.com/1jds/ga-small-juke-box/blob/main/jukebox-illustrative-screenshot.png" width="75%">
+<img alt="Sample Screenshot Close" src="https://github.com/1jds/ga-small-juke-box/blob/main/jukebox-illustrative-screenshot.png">
 
 ## Pros & Cons
 
