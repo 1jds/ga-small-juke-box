@@ -4,22 +4,17 @@ This repository hosts the code for a small homework task completed in the old cl
 
 Here is an illustrative image of the project running on http://localhost:3000/
 
-<img alt="Sample Screenshot Close" src="" width="75%">
+<img alt="Sample Screenshot Close" src="https://github.com/1jds/ga-small-juke-box/blob/main/jukebox-illustrative-screenshot.png" width="75%">
 
 ## Pros & Cons
 
 ### Cons
 Were this code to be refactored, the following things could be improved:
-- All unnecesary inline styles could be moved into the `.css` file
-- The code could be reorganised into fewer components
-- The color-scheme could be changed to aid accessability. Below is an illustrative image which shows the color-contrast of 2.07 on the buttons against the white text.
-
-  > Element has insufficient color contrast of 2.07 (foreground color: #ffffff, background color: #55c2da, font size: 14.4pt (19.2px), font weight: normal). Expected contrast ratio of 4.5:1
-
-![Sample Screenshot with Tools](https://github.com/1jds/ga-to-do-app/blob/main/to%20do%20list%20app%20illustrative%20screenshot.png)
+- Obviously, I would use the most up-to-date React, rather than the older style using class-based components. One reason for this is that the new function-based React components require a lot less boilerplate, and have additional potential due to the availability of hooks (although, perhaps, one could argue that the life-cycle methods on class-based components had some benefits over their hook counterparts such as useState).
 
 ### Pros
 What's good about this project
-- The factors mentioned as 'cons' were mostly deliberate choices for practice and experimentation purposes.
+- I love the N64 8-bit style of the visuals. The buttons were slightly modified from a CodePen pen by Matthew Shields [HERE](https://codepen.io/MatthewShields/pen/pwrXpV?editors=0100).
+- Working on the slider and giving it a custom appearance in line with the button styles helped me to advance my css skills when it comes to working with those html elements that are not always straightforward to style.
 - While modern React with functional components and hooks is preferrable, it's always good to know how legacy code works.
 
